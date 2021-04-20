@@ -34,10 +34,7 @@ Route::group(['prefix' => 'auth'], function () {
         Route::get("productos", function () {
             return response()->json(Producto::all());
         });
-        /*
-            Si existe un dios, que me perdone por dejar todas las peticiones aquí
-            en lugar de separarlas a otro archivo o invocar un controlador
-        */
+
         Route::post("/producto", function(Request $request){
             $producto = new Producto($request->input());
             $producto->saveOrFail();
@@ -60,7 +57,7 @@ Route::group(['prefix' => 'auth'], function () {
         });
 
         // Clientes
-        
+
         Route::get("clientes", function () {
             return response()->json(Cliente::all());
         });
