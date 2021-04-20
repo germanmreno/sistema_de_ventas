@@ -8,6 +8,11 @@
             <form method="POST" action="{{route("productos.store")}}">
                 @csrf
                 <div class="form-group">
+                    <label class="label">Código de barras</label>
+                    <input required autocomplete="off" name="codigo_barras" class="form-control"
+                           type="text" placeholder="Código de barras">
+                </div>
+                <div class="form-group">
                     <label class="label">Descripción</label>
                     <input required autocomplete="off" name="descripcion" class="form-control"
                            type="text" placeholder="Descripción">
