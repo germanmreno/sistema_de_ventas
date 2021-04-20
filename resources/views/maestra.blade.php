@@ -17,7 +17,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" target="_blank" href="//parzibyte.me/blog">{{env("APP_NAME")}}</a>
+    <a class="navbar-brand" href="/">{{env("APP_NAME")}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
             id="botonMenu" aria-label="Mostrar u ocultar menú">
         <span class="navbar-toggler-icon"></span>
@@ -64,10 +64,6 @@
                     </a>
                 </li>
             @endauth
-            <li class="nav-item">
-                <a class="nav-link" href="{{route("soporte.index")}}">Soporte&nbsp;<i
-                        class="fa fa-hands-helping"></i></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route("acerca_de.index")}}">Acerca de&nbsp;<i class="fa fa-info"></i></a>
             </li>

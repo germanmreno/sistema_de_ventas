@@ -5,8 +5,10 @@
         <div class="col-12">
             <h1>Acerca de</h1>
             <p>
-                Sistema de ventas programado por Arianna y Germán Moreno para Mini Market C.A.
+                Sistema de ventas programado por Arianna González y Germán Moreno para Mini Market C.A. como proyecto para la materia de Lenguajes de Programación II de la Universidad Alejandro de Humboldt en el Semestre DCM0501.
                 <br>
+                <br>
+                En este sistema se ha hecho uso de: Boostrap para los estilos, Flaticon para las imágenes, Laravel como framework principal y MySQL para el respaldo de datos.
             </p>
             <h2>Créditos de las imágenes</h2>
 

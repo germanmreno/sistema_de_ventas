@@ -13,8 +13,8 @@
                 </div>
                 <div class="form-group">
                     <label class="label">Teléfono</label>
-                    <input required autocomplete="off" name="telefono" class="form-control"
-                           type="text" placeholder="Teléfono">
+                    <input required autocomplete="off" name="telefono" class="form-control" minlength="11" maxlength="11"
+                           type="text" placeholder="Teléfono (recuerde no superar los 11 dígitos)">
                 </div>
 
                 @include("notificacion")

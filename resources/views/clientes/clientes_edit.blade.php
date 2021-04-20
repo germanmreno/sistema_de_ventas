@@ -16,7 +16,8 @@
                     <label class="label">Teléfono</label>
                     <input required value="{{$cliente->telefono}}" autocomplete="off" name="telefono"
                            class="form-control"
-                           type="text" placeholder="Teléfono">
+                           type="text" minlength="11" maxlength="11"
+                           type="text" placeholder="Teléfono (recuerde no superar los 11 dígitos)">
                 </div>
 
                 @include("notificacion")

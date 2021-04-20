@@ -1,25 +1,4 @@
 <?php
-/*
-
-  ____          _____               _ _           _
- |  _ \        |  __ \             (_) |         | |
- | |_) |_   _  | |__) |_ _ _ __ _____| |__  _   _| |_ ___
- |  _ <| | | | |  ___/ _` | '__|_  / | '_ \| | | | __/ _ \
- | |_) | |_| | | |  | (_| | |   / /| | |_) | |_| | ||  __/
- |____/ \__, | |_|   \__,_|_|  /___|_|_.__/ \__, |\__\___|
-         __/ |                               __/ |
-        |___/                               |___/
-
-    Blog:       https://parzibyte.me/blog
-    Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
-    Contacto:   https://parzibyte.me/blog/contacto/
-
-    Copyright (c) 2020 Luis Cabrera Benito
-    Licenciado bajo la licencia MIT
-
-    El texto de arriba debe ser incluido en cualquier redistribucion
-*/ ?>
-<?php
 
 namespace App\Http\Controllers;
 
@@ -45,8 +24,6 @@ class VentasController extends Controller
         $impresora->setEmphasis(false);
         $impresora->text("Cliente: ");
         $impresora->text($venta->cliente->nombre . "\n");
-        $impresora->text("\nhttps://parzibyte.me/blog\n");
-        $impresora->text("\n===============================\n");
         $total = 0;
         foreach ($venta->productos as $producto) {
             $subtotal = $producto->cantidad * $producto->precio;
@@ -64,7 +41,6 @@ class VentasController extends Controller
         $impresora->setJustification(Printer::JUSTIFY_CENTER);
         $impresora->setTextSize(1, 1);
         $impresora->text("Gracias por su compra\n");
-        $impresora->text("https://parzibyte.me/blog");
         $impresora->feed(5);
         $impresora->close();
         return redirect()->back()->with("mensaje", "Ticket impreso");
